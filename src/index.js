@@ -20,17 +20,24 @@ const decrement = () => {
   }
 }
 //Reducer (descrie how the current store changes into the new store)
-  const counter = (state = 0, action) => {
-    switch(action.type) {
-      case "INCREMENT":
-          return state + 1;
-      case "DECREMENT":
-          return state - 1;
-    }
+const counter = (state = 0, action) => {
+  switch(action.type) {
+    case "INCREMENT":
+        return state + 1;
+    case "DECREMENT":
+        return state - 1;
   }
+}
 
-  
+let store = createStore(counter);
+
+//Display it in the console
+store.subscribe(() => console.log('Store:', store.getState()));
+
 //DISPATCH
+store.dispatch(increment());
+store.dispatch(decrement());
+store.dispatch(decrement());
 
 ReactDOM.render(
   <React.StrictMode>
