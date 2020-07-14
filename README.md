@@ -1,4 +1,10 @@
+# Redux Counter
+Set up boiler plate for redux, utilized react-redux and redux library. Learned about Action, Store, and Reducers.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+##Final Project
+<img src="public/images/redux-counter-login.gif" alt="redux-counter-app">
 
 ## Available Scripts
 
