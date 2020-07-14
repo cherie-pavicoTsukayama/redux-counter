@@ -1,9 +1,12 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
+import {increment} from './actions';
+
 
 function App() {
   const counter = useSelector(state => state.counter);
   const isLogged = useSelector(state => state.isLogged);
+  const dispatch = useDispatch();
 
   function displayLogMessage() {
     return(
@@ -15,7 +18,7 @@ function App() {
   return (
     <div>
       <h1>Counter {counter}</h1>
-      <button>
+      <button onClick={() => dispatch(increment())}>
         +
       </button>
       <button>
